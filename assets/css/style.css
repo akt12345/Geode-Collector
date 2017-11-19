@@ -1,0 +1,24 @@
+body {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)),
+    url(../images/background_b.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+.row {
+  margin: 5px;
+}
+
+
+
+.img {
+  margin-bottom: 10px;
+}
+

@@ -1,44 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CrystalsCollector Game</title>
+    <title>Crystals Collector Game - Abby Thoresen</title>
+    <meta charset="utf-8">
+    <!-- Viewport here -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- css links here reset & style-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- bootstrap link here -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <!-- Jquery link here -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
-<body><h1>Crystals Collector!</h1>
 
-  <!-- Do I use bootstrap or css??? Want to make it very clean to show my  graphic design/layout skills-->
+<body>
 
-
-<div id="game">
-  <!-- main text here -->
-
-  <h3>You will be given a random number at the start of the game.</br>
-      There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</br>
-      You win the game by matching your total score to random number, you lose the game if your total score goes abouve the random number.</br>
-      The value of each crystal is hidden from you until you click on it.</br>
-      Each time the game starts, the game will change the values of each crystal.
-    </h3>
-
- <!-- green box here -->
+   <!-- Bootstrap 4 beta 2- Set it Up!-->
 
 
- <!-- wins/losses sidebar here -->
+  <!-- Jumbo Tron - title here -->
+    <div class="jumbotron text-center">
+       <!-- title if I change my min -->
+       <!-- <h1>Crystal Collectors!</h1> -->
+        <img src="assets/images/title.png">
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="width: 30rem;">
+                <div class="card-header">
+                 Crystal Collector Instructions
+                </div>
 
 
-  <!-- 4 crystal images here -->
+                <div class="card-block">
+                    <p class="card-text">
+                        1. You will be given a random number at the start of the game.</br>
+
+                        2. There are four crystals below, by clicking on a crystal you will add a specific amount of points to your total score.</br>
+
+                        3. You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</br>
+
+                        4. The value of each crystal is hiden from you until you click on it.</br>
+
+                        5. Each time when the game starts, the game will change the value of each crystal, as well as the random number to guess.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Number To Guess</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div id="computerGuess"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Your Total Score</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div id="userGuess">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Score Counter</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <p>
+                        Wins: <div id="wins">0</div>
+                    </p>
+                    <p>
+                        Losses: <div id="loss">0</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-6 text-center">
+      <!-- <div class="text-center"> -->
+      <input id="aquamarine" type="image" class="img imgButtons" src="assets/images/blue.jpg"/>
+      <input id="amethyst" type="image" class="img imgButtons" src="assets/images/purple.jpg"/>
+      <input id="diamond" type="image" class="img imgButtons" src="assets/images/white.jpg"/>
+      <input id="emerald" type="image" class="img imgButtons" src="assets/images/green.jpg"/>
+
+    </div>
 
 
-   <!-- your total score is: goes here-->
+    <!-- close up the div -->
+    </div>
+
+
+
+    <!-- scripts from my bootstrap_template I created in class Tuesday - dont know if all necessary but I'll include them here -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 
 
-    <!-- score goes here -->
-
-
-</div>
-
-<script type="text/javascript" src="assets/javascript/game.js">
-</script>
+  <!-- javacsript here -->
+  <script type="text/javascript" src="assets/javascript/game.js">
+  </script>
 
 </body>
 </html>

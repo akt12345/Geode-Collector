@@ -1,69 +1,38 @@
-// SET THIS UP SUNDAY AM - comments first then start my coding..DESIGN WILL DO AFTER CODE WORKS
+// SET THIS UP SUNDAY PM
 
+// JQUERY
+//$(this).attr("data-letter")
 
-// Creates an array (Create Number Array) that lists out all of the options (Number computer is thinking of) call this alphabetLetters
-    var alphabetLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 
 // Variables - Creating variables to hold the number of wins, losses, guesses left, guesses so far and user guess set as null.
     var wins = 0;
     var losses = 0;
-    var guessesLeft = 9;
-    var guessesSoFar = [];
-    var userGuess = null;
+    var targetScore = 19;
+    var playersTotalScore = 0;
 
-// Randomly chooses a choice from the options array. This is the Computer's guess.
-    var letterToBeGuessed = alphabetLetters[Math.floor(Math.random() * alphabetLetters.length)];
-    console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " + guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
+// Randomly chooses a choice from the options array. This is the Computer's guess. 19-120 - Start Game Function( Here what variable is being se equal to that what  what the player is trying to reach 120 - Sets targetScore and sets players score back to 0. What does alter target score and players total score. tweek console log
+    Math.floor(Math.random)
+    console.log("");
 
-// This function is run whenever the user presses a key.
-    document.onkeyup = function(event) {
-
-
-// This determines which key was pressed. stores in userGuess as null :)
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
-
-// User Guess is added to GuessesSoFar - make not sure already picked - alphabet consistancy
-    if (guessesSoFar.indexOf(userGuess) < 0 && alphabetLetters.indexOf(userGuess) >= 0) {
-    guessesSoFar[guessesSoFar.length]=userGuess;
-    // if new then decrease by 1
-    guessesLeft--;
-    }
-
-
-// if letterToBeGuessed is same as userGuess then its a winner / reset guessesLeft to 9 / empty guessesSoFar / new random computer choice
-    if (letterToBeGuessed == userGuess) {
-    wins++;
-    console.log("You lucky duck, you WON!");
-    guessesLeft = 9;
-    guessesSoFar = [];
-    letterToBeGuessed = alphabetLetters[Math.floor(Math.random() * alphabetLetters.length)];
-    console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " + guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
-    }
+// sets values of crystals when game starts - random as well between 1-12.
 
 
 
-// if GuessesLeft turns 0 then its a Loss / reset guessesLeft to 9 / empty guessesSoFar / new random computer choice
-    if (guessesLeft == 0) {
-    losses++;
-    console.log("Sorry you lost. Try again :)");
-    guessesLeft = 9;
-    guessesSoFar = [];
-    letterToBeGuessed = alphabetLetters[Math.floor(Math.random() * alphabetLetters.length)];
-    console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " + guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
-    }
+// onclick event - triggers evrytime someone clicks on a crystal.
+
+
+
+// check everytime they check to say hey did they lose the game. if loss by 1 and restart game.
+// add value of crystal to their score - win loss or continue
+
+//same- wins goes up and game restarts. If they win game restarts
+
+
+
 
 
 // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/guesses left/ your guesses so far
-          var html =
-          "<p>Guess what letter I'm thinking of?</p>"+
-          "<p>Wins: " + wins + "</p>" +
-          "<p>Losses: " + losses + "</p>" +
-          "<p>Guesses left: " + guessesLeft + "</p>" +
-          "<p>Your guesses so far: " + guessesSoFar + "</p>";
-          // Set the inner HTML contents of the #game div to my index.html
-           document.querySelector("#game").innerHTML = html;
-  }
 
-//The end - whew wee
+
+//The end

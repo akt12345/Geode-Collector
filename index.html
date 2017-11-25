@@ -28,67 +28,94 @@
     <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div class="card" style="width: 30rem;">
-                <div class="card-header">
-                 <p class="h3">Crystal Collector Instructions</p>
+            <div class="card" style="width: 35rem;">
+                 <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+                <div class="card-header text-center">
+                 <p class="h3">Geode Collector Instructions</p>
+                </div>
                 </div>
 
 
-                <div class="card-block">
-                    <p class="card-text">
+                <div class="card-block text-center">
+                    <p class="card-text text-left">
                         1. You will be given a random number at the start of the game.</br>
 
-                        2. There are four crystals below, by clicking on a crystal you will add a specific amount of points to your total score.</br>
+                        2. There are four Geodes below, by clicking on a Geode you will add a specific amount of points to your  total score.</br>
 
                         3. You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</br>
 
-                        4. The value of each crystal is hiden from you until you click on it.</br>
+                        4. The value of each Geode is hiden from you until you click on it.</br>
 
-                        5. Each time when the game starts, the game will change the value of each crystal, as well as the random number to guess.
+                        5. Each time when the game starts, the game will change the value of each Geode, as well as the random number to guess.
                     </p>
                 </div>
             </div>
         </div>
+
+        <!-- NUMBER TO GUESS -->
         <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                    <h3 class="panel-title">Number To Guess</h3>
+         <div class="card" style="width: 12rem;">
+                 <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+                <div class="card-header text-center">
+                 <p class="h3">Number to Guess</p>
                 </div>
-                <div class="panel-body text-center">
-                    <div id="computerGuess"></div>
                 </div>
-            </div>
+
+                <div class ="card-block">
+                    <div class="card-text text-center">
+                        <div id="computerGuess"></div>
+                    </div>
+                </div>
+         </div>
         </div>
+
+
+        <!-- Your total score -->
         <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                    <h3 class="panel-title">Your Total Score</h3>
+         <div class="card" style="width: 12rem;">
+                 <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+                <div class="card-header text-center">
+                 <p class="h3">Your Total Score</p>
                 </div>
-                <div class="panel-body text-center">
-                    <div id="userGuess">0</div>
                 </div>
-            </div>
+
+                <div class ="card-block">
+                    <div class="card-text text-center">
+                        <div id="userGuess">0</div>
+                    </div>
+                </div>
+         </div>
         </div>
+
+
+
+        <!-- Score Counter -->
         <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                    <h3 class="panel-title">Score Counter</h3>
+         <div class="card" style="width: 12rem;">
+                 <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+                <div class="card-header text-center">
+                 <p class="h3">Score Counter</p>
                 </div>
-                <div class="panel-body text-center">
-                    <p>
+                </div>
+
+                <div class ="card-block">
+                    <div class="card-text text-center">
                         Wins: <div id="wins">0</div>
-                    </p>
-                    <p>
+                    </div>
+                    <div class="card-text text-center">
                         Losses: <div id="loss">0</div>
-                    </p>
+                    </div>
                 </div>
-            </div>
+         </div>
         </div>
 
+
+
+
+
+    <!-- Images -->
     <div class="col-md-7"></div>
     <div class="col-md-5 text-right">
-
-
       <input id="amethyst" type="image" class="img imgButtons" src="assets/images/purple.jpg"/>
       <input id="diamond" type="image" class="img imgButtons" src="assets/images/white.jpg"/>
       <input id="emerald" type="image" class="img imgButtons" src="assets/images/green.jpg"/>

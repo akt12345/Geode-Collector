@@ -5,11 +5,10 @@
 
 
 
-// Variables - Creating variables to hold the number of wins, losses, guesses left, guesses so far and user guess set as null.
-    var wins = 0;
-    var losses = 0;
-    var targetScore = 19;
-    var playersTotalScore = 0;
+// Variables - Creating variables to hold the number of wins, losses,
+guesses left, guesses so far and user guess set as null.     var wins
+= 0;     var losses = 0;     var targetScore = 19;     var
+playersTotalScore = 0;
 
 // Randomly chooses a choice from the options array. This is the Computer's guess. 19-120 - Start Game Function( Here what variable is being se equal to that what  what the player is trying to reach 120 - Sets targetScore and sets players score back to 0. What does alter target score and players total score. tweek console log
     Math.floor(Math.random)

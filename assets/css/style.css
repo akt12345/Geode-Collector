@@ -1,24 +1,26 @@
 body {
     background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.25)),
-    url(../images/background_b.jpg) no-repeat center center fixed;
+    url(../images/background_d.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-
-
-.row {
-  margin: 5px;
+html {
+  font-size: 12px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 
-
-.img {
-  margin-bottom: 10px;
+.jumbotron {
+    background-color: transparent !important;
+    color:##000000d4;
+    padding: 105px;
+    margin-bottom: 10px;
+    font-size: 105px;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
 }
+
 

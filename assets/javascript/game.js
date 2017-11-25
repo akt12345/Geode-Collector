@@ -1,37 +1,99 @@
-// SET THIS UP SUNDAY PM
+//Jquery here
+$(document).ready(function() {
 
-// JQUERY
-//$(this).attr("data-letter")
-
-
-
-// Variables - Creating variables to hold the number of wins, losses,
-guesses left, guesses so far and user guess set as null.     var wins
-= 0;     var losses = 0;     var targetScore = 19;     var
-playersTotalScore = 0;
-
-// Randomly chooses a choice from the options array. This is the Computer's guess. 19-120 - Start Game Function( Here what variable is being se equal to that what  what the player is trying to reach 120 - Sets targetScore and sets players score back to 0. What does alter target score and players total score. tweek console log
-    Math.floor(Math.random)
-    console.log("");
-
-// sets values of crystals when game starts - random as well between 1-12.
+    // 1. Variables Here for my geode button classes - hidden value is between 1 - 12.
+    var purpleAmnt = Math.floor((Math.random() * 12) + 1);
+    var whiteAmnt = Math.floor((Math.random() * 12) + 1);
+    var greenAmnt = Math.floor((Math.random() * 12) + 1);
+    var blueAmnt = Math.floor((Math.random() * 12) + 1);
 
 
 
-// onclick event - triggers evrytime someone clicks on a crystal.
+    // 2. Random Number of computerNumber - set between 19-120
+    computerNumber = Math.floor((Math.random() * 120) + 19);
+    //  console log the computerNumber to see that it works
+    console.log(computerNumber);
+
+    // 3. Variable for wins and losses - which needs to be set at 0 plus to be reset.
+    var wins = 0;
+    var losses = 0;
+
+    // 4. Variable for all the numbers added - make it clickNo
+    var clickNo = 0;
+
+    // JQuery
+
+    // J.1 Need to send number to Div - Number to Guess
+    $("#computerGuess").html(computerNumber);
+
+    // J.2 Click on each Div - Geode Buttons class="img imgButtons"
+     $("#purple").click(function() {
+        clickNo += purpleAmnt;
+        console.log(purpleAmnt);
+    });
+
+    $("#white").click(function() {
+        clickNo += whiteAmnt;
+        console.log(whiteAmnt);
+    });
+
+    $("#green").click(function() {
+        clickNo += greenAmnt;
+        console.log(greenAmnt);
+    });
+
+    $("#blue").click(function() {
+        clickNo += blueAmnt;
+        console.log(blueAmnt);
+    });
 
 
 
-// check everytime they check to say hey did they lose the game. if loss by 1 and restart game.
-// add value of crystal to their score - win loss or continue
+    // When each geode image is clicked, it generates a random number, hide it from the user
+    $(".imgButtons").on("click", function() {
 
-//same- wins goes up and game restarts. If they win game restarts
+        $("#userGuess").html(clickNo);
+
+        // Compared to auto random number and compares - alert them
+        if (clickNo == computerNumber) {
+            console.log(wins++);
+            wins = wins++;
+            $('#wins').html(wins);
+            alert("Congrats!! You Win A Geode!")
+            reset();
+            $("#userGuess").html(clickNo);
+        }
+         else if (clickNo >= computerNumber) {
+            console.log(losses++);
+            losses = losses++;
+            $('#loss').html(losses);
+            alert("Sorry, You Lost. But Keep Trying!")
+            reset();
+            $("#userGuess").html(clickNo);
+        }
+    });
+
+    // Function to reset
+    function reset() {
+
+      // Reset score counter.
+        clickNo = 0;
+
+        // Reset for Variables - computerNumber and geodes
+        computerNumber = Math.floor((Math.random() * 120) + 19);
+
+        blueAmnt = Math.floor((Math.random() * 12) + 1);
+
+        greenAmnt = Math.floor((Math.random() * 12) + 1);
+
+        whiteAmnt = Math.floor((Math.random() * 12) + 1);
+
+        purpleAmnt = Math.floor((Math.random() * 12) + 1);
 
 
+        // Need to send number back into Div - Number to Guess
+        $("#computerGuess").html(computerNumber);
 
 
-
-// Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/guesses left/ your guesses so far
-
-
-//The end
+    }
+});

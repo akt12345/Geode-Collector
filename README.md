@@ -1,5 +1,5 @@
 # Geode Collector Game 
-# A Fun jQuery Guessing Game
+A Fun jQuery Guessing Game
 
 This is a front-end application the uses HTML5, CSS, JavaScript and jQuery. This particular project highlights using jQuery to dynamically update the HTML of the application.
 
